@@ -1,0 +1,42 @@
+.inputField {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    margin: 0px auto 25px;
+}
+
+.label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%) scale(1);
+    pointer-events: none;
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    transition: transform 150ms, left 150ms, color 250ms;
+}
+
+.input {
+    width: 445px;
+    height: 40px;
+
+    border: 0;
+    border-bottom: 1px solid #000000;
+    outline: 0;
+
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.input::placeholder {
+    color: transparent
+}
+
+.input:not(:placeholder-shown) + .label,
+.input:focus + .label {
+    color: rgb(160, 160, 160);
+    transform: translateY(-170%) scale(0.9);
+    left: 5px;
+}
